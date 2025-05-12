@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header, section, footer {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+header {
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.services {
+  background-color: #e2e2e2;
+}
+
+.contact {
+  background-color: #f9f9f9;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+}
+
+footer {
+  text-align: center;
+  background-color: #f4f4f4;
+}
