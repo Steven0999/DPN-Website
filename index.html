@@ -2,50 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DPN Transport Ltd</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DPN Transport Enquiry</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>DPN Transport Ltd</h1>
-    <p>Committed to Reliable Transport Solutions</p>
-  </header>
 
-  <section class="services">
-    <h2>Efficient Courier Services</h2>
-    <p>Delivering Excellence, Every Mile</p>
-    <p>At the heart of our operations lies a steadfast commitment to delivering competitive service, with an unwavering focus on ensuring your freight is our top priority. Our dedicated team works to provide you with a seamless service. When you choose us, you can rest assured that your freight is in capable hands, handled with the utmost care and professionalism every step of the way.</p>
-  </section>
+  <button id="enquireBtn">Enquire Here</button>
 
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <form id="contact-form">
-      <label for="name">Name*</label>
-      <input type="text" id="name" name="name" required />
+  <div id="popupForm" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Enquiry Form</h2>
+      <form id="enquiryForm">
+        <div class="job-block">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="text" name="from" placeholder="Journey From" required />
+          <input type="text" name="to" placeholder="Journey To" required />
+          <select name="vehicle">
+            <option value="<7.5 tonnes vehicle">&lt;7.5 tonnes vehicle</option>
+            <option value="C licenced truck">C licenced truck</option>
+            <option value="C+E truck">C+E truck</option>
+            <option value="D truck">D truck</option>
+          </select>
+        </div>
 
-      <label for="email">E-mail</label>
-      <input type="email" id="email" name="email" />
+        <div id="jobsContainer"></div>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message"></textarea>
-
-      <label>
-        <input type="checkbox" required />
-        I hereby agree that this data will be stored and processed for the purpose of establishing contact. I am aware that I can revoke my consent at any time.*
-      </label>
-
-      <button type="submit">Send</button>
-    </form>
-    <div id="form-response"></div>
-    <p>Director - Daniel Newton</p>
-    <p>Tel: 07508471546</p>
-    <p>Email: info@dpntransportltd.co.uk</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 DPN Transport Ltd. All rights reserved.</p>
-  </footer>
+        <button type="button" id="addJobBtn">Add Another Job</button>
+        <button type="submit" id="sendBtn">Send</button>
+      </form>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
